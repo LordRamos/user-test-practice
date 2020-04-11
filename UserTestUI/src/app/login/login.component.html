@@ -1,0 +1,34 @@
+<div class="session mat-custom-primary">
+    <div class="session-wrapper" fxLayout>
+        <mat-card class="radius-none " style="background-color: rgba(186, 213, 244, 0.59); margin-top:5%;" fxFlex
+            fxLayout="column" fxLayoutAlign="center center">
+            <mat-card-content ngClass.gt-xs="pa-3">
+                <form class="pa-1" [formGroup]="formLogin" (ngSubmit)="formLogin.valid && onSubmit()">
+                    <div class="session-logo-wrapper">
+                        <img src="assets/logo.png" width="349" height="90" />
+                    </div>
+                    <h2>
+                    </h2>
+                    <div fxLayout="column" fxLayoutAlign="space-around">
+                        <mat-form-field class="pt-1">
+                            <mat-icon matPrefix>person_outline</mat-icon>
+                            <input id="email" formControlName="email" autocomplete="email" matInput placeholder="Email"
+                                type="text" />
+                        </mat-form-field>
+                        <mat-form-field class="pt-1">
+                            <mat-icon matPrefix>lock_outline</mat-icon>
+                            <input id="password" formControlName="password" autocomplete="current-password" matInput
+                                type="password" placeholder="Password" />
+                        </mat-form-field>
+                        <small *ngIf="invalidLogin" class="mat-text-warn">Usuario o clave invalida</small>
+                        <button id="login" class="mt-1" color="primary" mat-raised-button>
+
+
+                            <span class=" button-text">Login</span>
+                        </button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

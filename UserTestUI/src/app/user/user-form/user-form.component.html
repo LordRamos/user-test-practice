@@ -1,0 +1,23 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-around">
+  <div fxFlex style="text-align: center;">
+    <h2>{{title}}</h2>
+  </div>
+  <div fxFlex>
+    <button mat-mini-fab color="primary" [routerLink]="['/user/list']">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+
+  <form [formGroup]="userForm" fxFlex='90' fxLayout="column" fxLayoutAlign="space-around">
+    <mat-form-field>
+      <input matInput formControlName="email" placeholder="Email" id="email" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="password" placeholder="Password" id="password" type="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="country" placeholder="Country" id="country" type="text">
+    </mat-form-field>
+    <button type='submit' mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
+  </form>
+</div>

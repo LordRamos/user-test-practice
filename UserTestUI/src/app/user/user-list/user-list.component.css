@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+@media (max-width: 360px)  {
+
+    .txtTable{
+      font-size: 10px;
+     }
+
+    table {
+      width: 10px;
+    }
+    button.mat-icon-button{
+      width: 12px;
+    }
+}
+
+
+.cont{
+  padding: 20px;
+}
